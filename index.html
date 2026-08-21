@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>九九骑行节（2026）· 请选择填写</title>
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1a1a1a; --muted:#8a8a8a; --line:#e8e8e8; --soft:#fafafa; --accent:#111111;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:520px;margin:0 auto;padding:54px 24px 64px}
+  header{text-align:center;margin-bottom:42px}
+  .kicker{font-size:11px;letter-spacing:5px;color:var(--muted);text-transform:uppercase;margin-bottom:16px}
+  h1{font-size:25px;font-weight:600;letter-spacing:1px;line-height:1.4}
+  .sub{margin-top:14px;font-size:14px;color:var(--muted);line-height:1.7}
+  .card{
+    display:block;text-decoration:none;color:inherit;background:var(--soft);
+    border:1px solid var(--line);border-radius:16px;padding:26px 24px;margin-bottom:16px;
+    transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+  }
+  .card:hover,.card:active{
+    transform:translateY(-2px);border-color:#cfcfcf;box-shadow:0 10px 28px rgba(0,0,0,.06);
+  }
+  .idx{font-size:12px;color:var(--muted);letter-spacing:2px}
+  .card h2{font-size:18px;font-weight:600;margin:8px 0 6px}
+  .card p{font-size:13px;color:var(--muted);line-height:1.65}
+  .go{
+    display:inline-flex;align-items:center;gap:6px;margin-top:16px;
+    font-size:14px;font-weight:500;color:var(--fg);
+  }
+  .go::after{content:"→";font-size:16px;transition:transform .2s ease}
+  .card:hover .go::after{transform:translateX(4px)}
+  footer{text-align:center;margin-top:46px;font-size:12px;color:var(--muted);letter-spacing:1px;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">NINEBOT EVENT</div>
+    <h1>九九骑行节（2026）</h1>
+    <p class="sub">欢迎你参加2026九九骑行节活动，让我们一起骑出去，让美好发生！请选择对应入口填写，三张表单分别收集不同信息，按需选择其一即可</p>
+  </header>
+
+  <a class="card" href="https://doc.weixin.qq.com/forms/AHwAVAcbAAgAfgAhwa2AFcCNaTvwR89Lf?page=1">
+    <div class="idx">01</div>
+    <h2>「九九骑行节」路书图鉴共创</h2>
+    <p>点击下方进入对应企业微信收集表填写</p>
+    <span class="go">立即填写</span>
+  </a>
+
+  <a class="card" href="https://doc.weixin.qq.com/forms/AHwAVAcbAAgAfgAhwa2AFcCNiBIiDJdWf?page=1">
+    <div class="idx">02</div>
+    <h2>「九九骑行节」里程荣誉计划</h2>
+    <p>点击下方进入对应企业微信收集表填写</p>
+    <span class="go">立即填写</span>
+  </a>
+
+  <a class="card" href="https://doc.weixin.qq.com/forms/AHwAVAcbAAgAfgAhwa2AFcCNkbokpW59f?page=1">
+    <div class="idx">03</div>
+    <h2>「九九骑行节」用户UGC内容共创</h2>
+    <p>点击下方进入对应企业微信收集表填写</p>
+    <span class="go">立即填写</span>
+  </a>
+
+  <footer>扫码进入 · 信息安全收集<br>本页面仅作跳转引导，不存储任何填写数据</footer>
+</div>
+</body>
+</html>
