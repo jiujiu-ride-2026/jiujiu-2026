@@ -1,96 +1,71 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#101418">
-<title>九号暖冬计划 · 参与入口</title>
-<style>
-  :root{
-    --ink:#f2f2f0;        /* 主文字色（占位），正式使用前按 Ninebot VI 品牌色规范校准 */
-    --ink-dim:#b9bab6;    /* 次要文字色（占位） */
-    --paper:#101418;      /* 背景兜底色：图片未加载时显示 */
-    --accent:#e8a25c;     /* 强调色（占位）：取自背景图路灯暖橙，按 VI 校准 */
-    --line:rgba(255,255,255,.18);
-    --glass:rgba(16,20,24,.55);
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html,body{min-height:100%}
-  body{
-    font-family:-apple-system,"PingFang SC","Helvetica Neue",Arial,sans-serif;
-    background:var(--paper);color:var(--ink);
-    min-height:100vh;min-height:100dvh;
-  }
-  .bg{position:fixed;inset:0;z-index:-2;background:url('bg-night.jpg') center/cover no-repeat #101418}
-  .veil{position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,10,14,.66) 0%,rgba(8,10,14,.30) 34%,rgba(8,10,14,.34) 62%,rgba(8,10,14,.72) 100%)}
-  .wrap{
-    max-width:430px;
-    margin:0 auto;
-    min-height:100vh;min-height:100dvh;
-    display:flex;flex-direction:column;
-    padding:calc(18px + env(safe-area-inset-top)) 20px calc(14px + env(safe-area-inset-bottom));
-  }
-  header{text-align:center;padding:14px 0 4px}
-  .brand{font-size:11px;letter-spacing:.35em;color:var(--ink-dim)}
-  h1{margin-top:10px;font-size:27px;font-weight:600;letter-spacing:.05em;text-shadow:0 1px 8px rgba(0,0,0,.45)}
-  .sub{margin-top:8px;font-size:13px;color:var(--ink-dim);letter-spacing:.2em}
-  .period{margin-top:10px;font-size:12px;color:var(--accent);letter-spacing:.12em}
-  .rule{
-    margin-top:16px;padding:11px 13px;border:1px solid var(--line);border-radius:10px;
-    font-size:12px;line-height:1.8;color:var(--ink-dim);
-    background:rgba(255,255,255,.07);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
-  }
-  main{flex:1;display:flex;flex-direction:column;gap:14px;padding-top:16px}
-  .card{
-    display:block;text-decoration:none;color:var(--ink);
-    background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:20px 18px;
-    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
-  }
-  .card:active{transform:scale(.99)}
-  .tag{display:inline-block;font-size:11px;letter-spacing:.2em;color:var(--accent);border:1px solid currentColor;border-radius:999px;padding:2px 10px;margin-bottom:10px}
-  .card h2{font-size:19px;font-weight:600;letter-spacing:.02em}
-  .card p{margin-top:8px;font-size:13px;line-height:1.7;color:var(--ink-dim)}
-  .card .go{display:inline-block;margin-top:14px;font-size:13px;color:var(--accent);letter-spacing:.1em}
-  footer{padding-top:18px;text-align:center;font-size:11px;color:rgba(255,255,255,.55);line-height:1.9}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>九号暖冬计划</title>
+  <link rel="stylesheet" href="app.css">
 </head>
-<body>
-  <div class="bg"></div>
-  <div class="veil"></div>
 
-  <div class="wrap">
-    <header>
-      <div class="brand">NINEBOT · 九号</div>
-      <h1>九号暖冬计划</h1>
-      <div class="sub">三重奖励 · 一次送达</div>
-      <div class="period">活动周期｜2026 年 11 月 1 日 — 11 月 30 日</div>
-    </header>
+<body class="immersive">
+  <div class="bg-layer"></div>
+  <div class="bg-veil"></div>
+  <div class="page">
+    <p class="eyebrow">Season 2026</p>
+    <h1>九号暖冬计划</h1>
+    <p class="lede"><span id="heroLead"></span><br><span id="heroSub"></span></p>
 
-    <div class="rule">
-      福利将于 12 月初统一发放。<br>
-      提交需绑定手机号与车辆 SN 码，一人一车一档，同一台车多账号提交只计一次。提交即视为同意活动规则与信息使用授权；审核结果在提交后 3 个工作日内以短信通知。
-    </div>
+    <a class="choice" id="link1" href="#" target="_blank" rel="noopener noreferrer">
+      <span class="arrow">进入 ›</span>
+      <span class="tag" id="tag1"></span>
+      <span class="name" id="name1"></span>
+      <span class="desc" id="desc1"></span>
+    </a>
 
-    <main>
-      <a class="card" href="https://segway-ninebot.feishu.cn/share/base/form/shrcnkCcWEC6P8WZApjnfwQXIMf">
-        <span class="tag">A · 里程冲线</span>
-        <h2>666km 骑行里程提交</h2>
-        <p>填写手机号与车辆 SN 码，上传九号出行 App 里程页截图（需含时间与总里程）。累计满 666km 且为前 999 名提交者得 10 元券，达标自动进入抽奖池。</p>
-        <span class="go">去提交</span>
-      </a>
+    <a class="choice" id="link2" href="#" target="_blank" rel="noopener noreferrer">
+      <span class="arrow">进入 ›</span>
+      <span class="tag" id="tag2"></span>
+      <span class="name" id="name2"></span>
+      <span class="desc" id="desc2"></span>
+      <span class="topic" id="topic2"></span>
+    </a>
 
-      <a class="card" href="https://segway-ninebot.feishu.cn/share/base/form/shrcnGEkShIMxCRlSW54i8lJB8c">
-        <span class="tag">B · 内容共创</span>
-        <h2>#九号服务伴全程# 内容提交</h2>
-        <p>填写手机号与车辆 SN 码，粘贴发帖链接并上传社媒主页截图与整帖截图。五条硬标准全过可入 99 个 20 元券名额，其中最优 9 条得 50 元券。</p>
-        <span class="go">去提交</span>
-      </a>
-    </main>
+    <hr class="divider">
 
-    <footer>
-      奖励规则以活动公示为准 · 中奖与达标名单将脱敏公示 3 天<br>
-      九号 · 品牌 × 用户运营团队
-    </footer>
+    <p class="lede" id="period" style="margin:0 0 6px;"></p>
+    <p class="foot" style="margin-top:0;">
+      提交即表示同意我们使用上述信息用于活动资格审核与福利发放。
+    </p>
   </div>
+
+  <script src="config.js"></script>
+  <script>
+    // 文案全部来自 config.js，改配置即可，不必动这里
+    document.getElementById('heroLead').textContent = HERO.lead;
+    document.getElementById('heroSub').textContent = HERO.sub;
+    document.getElementById('period').textContent = HERO.period;
+
+    ['mileage', 'post'].forEach(function (key, i) {
+      var act = ACTIVITIES[key];
+      var n = i + 1;
+      document.getElementById('tag' + n).textContent = act.tag;
+      document.getElementById('name' + n).textContent = act.name;
+      document.getElementById('desc' + n).textContent = act.desc;
+
+      var topicEl = document.getElementById('topic' + n);
+      if (topicEl) {
+        if (act.topic) {
+          topicEl.textContent = act.topic;
+          topicEl.style.display = '';
+        } else {
+          topicEl.style.display = 'none';
+        }
+      }
+
+      document.getElementById('link' + n).href = act.url;
+    });
+  </script>
 </body>
+
 </html>

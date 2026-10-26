@@ -1,0 +1,1075 @@
+/* 九号暖冬计划 —— 统一视觉基调：暖白底、克制留白、暖橙点缀 */
+
+:root {
+  --bg: #f5f2ed;
+  --surface: #ffffff;
+  --ink: #1a1a1a;
+  --ink-2: #6b6560;
+  --ink-3: #9a938c;
+  --line: #e6e1d9;
+  --accent: #b85c2e;
+  --accent-soft: #f7ece4;
+  --ok: #2f6d4f;
+  --ok-soft: #eaf3ee;
+  --no: #8f3a34;
+  --no-soft: #f8eceb;
+  --pending: #8a6d2f;
+  --pending-soft: #f8f2e2;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(26, 26, 26, .04), 0 8px 24px rgba(26, 26, 26, .05);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 22px 72px;
+}
+
+/* ---------- 通用元素 ---------- */
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: .22em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  margin: 0 0 12px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.lede {
+  color: var(--ink-2);
+  margin: 0 0 34px;
+  font-size: 14.5px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 36px 0;
+  border: 0;
+}
+
+/* ---------- 入口按钮卡片 ---------- */
+
+.choice {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .22s ease, transform .22s ease, box-shadow .22s ease;
+}
+
+.choice:active {
+  transform: scale(.992);
+}
+
+.choice:hover {
+  border-color: #d6cec3;
+  box-shadow: var(--shadow);
+}
+
+.choice .tag {
+  font-size: 11.5px;
+  letter-spacing: .16em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.choice .name {
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+
+.choice .desc {
+  font-size: 13.5px;
+  color: var(--ink-2);
+  display: block;
+}
+
+.choice .arrow {
+  float: right;
+  color: var(--ink-3);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+/* ---------- 表单 ---------- */
+
+.field {
+  margin-bottom: 22px;
+}
+
+.field label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.field label .req {
+  color: var(--accent);
+  margin-left: 2px;
+}
+
+.hint {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  margin: -2px 0 9px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color .2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent);
+}
+
+input.error,
+textarea.error {
+  border-color: var(--no);
+}
+
+.err-msg {
+  display: none;
+  font-size: 12.5px;
+  color: var(--no);
+  margin-top: 6px;
+}
+
+.err-msg.show {
+  display: block;
+}
+
+/* ---------- 图片上传 ---------- */
+
+.uploader {
+  border: 1px dashed #cfc7bc;
+  border-radius: 12px;
+  background: var(--surface);
+  padding: 26px 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease;
+}
+
+.uploader:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.uploader .plus {
+  font-size: 22px;
+  color: var(--accent);
+  line-height: 1;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.uploader .txt {
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.uploader .sub {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  margin-top: 4px;
+}
+
+.preview {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.preview img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  background: #fbfaf8;
+}
+
+.preview .bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+
+.preview .bar button {
+  background: none;
+  border: none;
+  color: var(--no);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+/* ---------- 按钮 ---------- */
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 15.5px;
+  font-weight: 500;
+  font-family: inherit;
+  color: #fff;
+  background: var(--ink);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity .2s ease;
+}
+
+.btn:active {
+  opacity: .86;
+}
+
+.btn:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.btn.accent {
+  background: var(--accent);
+}
+
+/* ---------- 反馈条 ---------- */
+
+.notice {
+  display: none;
+  padding: 13px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+.notice.show {
+  display: block;
+}
+
+.notice.error {
+  background: var(--no-soft);
+  color: var(--no);
+  border-color: #edd8d6;
+}
+
+.notice.ok {
+  background: var(--ok-soft);
+  color: var(--ok);
+  border-color: #d6e7de;
+}
+
+/* ---------- 后台统计卡 ---------- */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+}
+
+.stat .label {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  margin-bottom: 8px;
+  line-height: 1.4;
+  min-height: 34px;
+}
+
+.stat .num {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+
+.stat .sub {
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-top: 7px;
+}
+
+.stat .num.ok {
+  color: var(--ok);
+}
+
+/* ---------- 工具条 ---------- */
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.toolbar input[type="text"] {
+  flex: 1 1 160px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.toolbar .btn {
+  width: auto;
+  padding: 10px 15px;
+  font-size: 13.5px;
+  white-space: nowrap;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 8px 15px;
+  font-size: 13.5px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all .2s ease;
+}
+
+.tab.on {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.tab .cnt {
+  opacity: .6;
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+/* ---------- 批量条 ---------- */
+
+.bulkbar {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  font-size: 13.5px;
+}
+
+.bulkbar.show {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bulkbar .btn {
+  width: auto;
+  padding: 6px 13px;
+  font-size: 13px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.bulkbar button.link {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, .65);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 6px 0;
+}
+
+/* ---------- 数据卡片 ---------- */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 17px;
+  margin-bottom: 11px;
+}
+
+.card.picked {
+  border-color: var(--ink);
+}
+
+.card.pending {
+  border-left: 3px solid var(--pending);
+}
+
+.card.approved {
+  border-left: 3px solid var(--ok);
+}
+
+.card.rejected {
+  border-left: 3px solid var(--no);
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.card-head .who {
+  min-width: 0;
+}
+
+.card-head .nm {
+  font-size: 15.5px;
+  font-weight: 600;
+}
+
+.card-head .act {
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: .04em;
+  margin-top: 2px;
+}
+
+.card-head .tm {
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 5px;
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.badge.pending {
+  background: var(--pending-soft);
+  color: var(--pending);
+}
+
+.badge.approved {
+  background: var(--ok-soft);
+  color: var(--ok);
+}
+
+.badge.rejected {
+  background: var(--no-soft);
+  color: var(--no);
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 5px 10px;
+  font-size: 13.5px;
+  margin-bottom: 13px;
+}
+
+.kv dt {
+  color: var(--ink-3);
+}
+
+.kv dd {
+  margin: 0;
+  word-break: break-all;
+}
+
+.kv dd.mono {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 13px;
+  letter-spacing: .02em;
+}
+
+.row-act {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.row-act button,
+.row-act a.lk {
+  padding: 7px 14px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .18s ease;
+}
+
+.row-act a.lk {
+  color: var(--ink-2);
+}
+
+.row-act .approve {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+.row-act .approve:hover {
+  background: var(--ok-soft);
+}
+
+.row-act .reject {
+  border-color: var(--no);
+  color: var(--no);
+}
+
+.row-act .reject:hover {
+  background: var(--no-soft);
+}
+
+.row-act .approve.on {
+  background: var(--ok);
+  color: #fff;
+}
+
+.row-act .reject.on {
+  background: var(--no);
+  color: #fff;
+}
+
+.pick {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink-3);
+  cursor: pointer;
+}
+
+.pick input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--ink);
+  margin: 0;
+}
+
+/* ---------- 空态 / 加载 ---------- */
+
+.empty {
+  text-align: center;
+  padding: 54px 20px;
+  color: var(--ink-3);
+  font-size: 14px;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}
+
+.loading {
+  text-align: center;
+  padding: 44px 20px;
+  color: var(--ink-3);
+  font-size: 14px;
+}
+
+/* ---------- 弹层 ---------- */
+
+.mask {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 16, .82);
+  z-index: 50;
+  padding: 22px;
+  overflow: auto;
+  cursor: zoom-out;
+}
+
+.mask.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mask img {
+  max-width: 100%;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+  cursor: default;
+}
+
+.mask .tip {
+  position: fixed;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, .55);
+  font-size: 12.5px;
+}
+
+.foot {
+  margin-top: 34px;
+  font-size: 12.5px;
+  color: var(--ink-3);
+  line-height: 1.7;
+}
+
+.pageright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 10px;
+}
+
+.pageright .btn {
+  width: auto;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.back {
+  font-size: 13px;
+  color: var(--ink-3);
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 30px 18px 60px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat .num {
+    font-size: 26px;
+  }
+}
+
+/* ============================================================
+   沉浸式冬天背景 —— 入口页整屏 + 表单页顶部横幅
+   背景图：assets/bg-night.jpg
+   ============================================================ */
+
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  background: #0b0e12 url('assets/bg-night.jpg') center center / cover no-repeat;
+  z-index: -2;
+}
+
+/* 遮罩：保证白色文字在任何一张图上都有足够对比度 */
+.bg-veil {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(9, 11, 15, .70) 0%,
+      rgba(9, 11, 15, .48) 34%,
+      rgba(9, 11, 15, .74) 70%,
+      rgba(7, 9, 12, .95) 100%);
+  z-index: -1;
+}
+
+body.immersive {
+  background-color: #0b0e12;
+  color: #ffffff;
+}
+
+body.immersive .eyebrow {
+  color: rgba(255, 255, 255, .52);
+}
+
+body.immersive h1 {
+  color: #ffffff;
+}
+
+body.immersive .lede {
+  color: rgba(255, 255, 255, .74);
+}
+
+body.immersive .foot {
+  color: rgba(255, 255, 255, .46);
+}
+
+body.immersive .divider {
+  background: rgba(255, 255, 255, .16);
+}
+
+/* 毛玻璃活动卡片 */
+body.immersive .choice {
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+body.immersive .choice:hover {
+  background: rgba(255, 255, 255, .11);
+  border-color: rgba(255, 255, 255, .30);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .32);
+}
+
+body.immersive .choice .name {
+  color: #ffffff;
+}
+
+body.immersive .choice .desc {
+  color: rgba(255, 255, 255, .62);
+}
+
+/* 活动话题：单独成行，用强调色点出，不带边框避免抢卡片主体 */
+.choice .topic {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: #a9702c;
+}
+
+body.immersive .choice .topic {
+  color: #f0c48f;
+}
+
+body.immersive .choice .tag {
+  color: #e8a866;
+}
+
+body.immersive .choice .arrow {
+  color: rgba(255, 255, 255, .40);
+}
+
+/* ---------- 表单页顶部氛围横幅 ---------- */
+
+.banner {
+  position: relative;
+  height: 172px;
+  margin: -40px -22px 28px;
+  background: #0b0e12 url('assets/bg-night.jpg') center 32% / cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 22px 20px;
+  overflow: hidden;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(9, 11, 15, .42) 0%,
+      rgba(9, 11, 15, .58) 45%,
+      rgba(9, 11, 15, .88) 100%);
+}
+
+.banner-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.banner-inner .back {
+  color: rgba(255, 255, 255, .62);
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.banner-inner .back:hover {
+  color: #ffffff;
+}
+
+.banner-inner .eyebrow {
+  color: rgba(255, 255, 255, .50);
+  margin: 0 0 6px;
+}
+
+.banner-inner h2 {
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .banner {
+    height: 152px;
+    margin: -30px -18px 24px;
+    padding: 0 18px 18px;
+  }
+
+  .banner-inner h2 {
+    font-size: 19px;
+  }
+}
+
+/* ============================================================
+   深色页面下的表单控件适配
+   （入口页与收集页共用同一张背景，避免深浅色切换的割裂感）
+   ============================================================ */
+
+body.immersive .back {
+  color: rgba(255, 255, 255, .62);
+}
+
+body.immersive .back:hover {
+  color: #ffffff;
+}
+
+body.immersive input[type="text"],
+body.immersive input[type="tel"],
+body.immersive input[type="url"],
+body.immersive input[type="password"],
+body.immersive textarea {
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .16);
+  color: #ffffff;
+}
+
+body.immersive input::placeholder,
+body.immersive textarea::placeholder {
+  color: rgba(255, 255, 255, .34);
+}
+
+body.immersive input:focus,
+body.immersive textarea:focus {
+  border-color: #e8a866;
+}
+
+body.immersive input.error,
+body.immersive textarea.error {
+  border-color: #f0a49e;
+}
+
+body.immersive .field label {
+  color: rgba(255, 255, 255, .92);
+}
+
+body.immersive .field label .req {
+  color: #e8a866;
+}
+
+body.immersive .hint {
+  color: rgba(255, 255, 255, .50);
+}
+
+body.immersive .err-msg {
+  color: #f0a49e;
+}
+
+/* 上传区 */
+body.immersive .uploader {
+  background: rgba(255, 255, 255, .05);
+  border-color: rgba(255, 255, 255, .22);
+}
+
+body.immersive .uploader:hover {
+  border-color: #e8a866;
+  background: rgba(232, 168, 102, .10);
+}
+
+body.immersive .uploader .txt {
+  color: #ffffff;
+}
+
+body.immersive .uploader .sub {
+  color: rgba(255, 255, 255, .48);
+}
+
+body.immersive .uploader .plus {
+  color: #e8a866;
+}
+
+body.immersive .preview {
+  background: rgba(255, 255, 255, .05);
+  border-color: rgba(255, 255, 255, .16);
+}
+
+body.immersive .preview img {
+  background: rgba(0, 0, 0, .25);
+}
+
+body.immersive .preview .bar {
+  border-top-color: rgba(255, 255, 255, .14);
+  color: rgba(255, 255, 255, .60);
+}
+
+body.immersive .preview .bar button {
+  color: #e8a866;
+}
+
+/* 按钮：深色页上白底黑字最清楚 */
+body.immersive .btn {
+  background: #ffffff;
+  color: #14171c;
+}
+
+body.immersive .btn.ghost {
+  background: transparent;
+  color: rgba(255, 255, 255, .82);
+  border-color: rgba(255, 255, 255, .22);
+}
+
+body.immersive .btn.accent {
+  background: #e8a866;
+  color: #14171c;
+}
+
+body.immersive .btn:disabled {
+  opacity: .45;
+}
+
+/* 提示条 */
+body.immersive .notice.error {
+  background: rgba(143, 58, 52, .22);
+  color: #f0a49e;
+  border-color: rgba(143, 58, 52, .42);
+}
+
+body.immersive .notice.ok {
+  background: rgba(47, 109, 79, .22);
+  color: #93d3ae;
+  border-color: rgba(47, 109, 79, .42);
+}
+
+/* 收集页顶部达标门槛条 */
+.rule-bar {
+  margin: 0 0 22px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: rgba(232, 168, 102, .09);
+  border: 1px solid rgba(232, 168, 102, .26);
+  color: rgba(242, 196, 141, .94);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: .01em;
+}
+
+/* 表单主体：整块深色玻璃面板。
+   把控件收进一个连续的深色面里，而不是散落在背景图上，
+   这样页面不再出现「一块深、一块浅」的割裂感。 */
+.sheet {
+  background: rgba(10, 13, 18, .52);
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: 18px;
+  padding: 24px 20px 22px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .34);
+}
+
+.sheet .field:last-of-type {
+  margin-bottom: 0;
+}
+
+/* 提交按钮：改用暖琥珀填充，取代此前刺眼的白底 */
+body.immersive .btn {
+  background: #e8a866;
+  color: #14171c;
+}
