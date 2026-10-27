@@ -25,7 +25,7 @@ var ACTIVITIES = {
     tag: 'LINE 02',
     name: '发帖晒出你的冬季用车小妙招',
     desc: '分享冬季用车心得，并留下你的主页，方便我们找到你',
-    topic: '#九号服务伴全程#',
+    topic: '带话题 #九号服务伴全程# 和 #九友会#',
     url: 'https://segway-ninebot.feishu.cn/share/base/form/shrcnGEkShIMxCRlSW54i8lJB8c'
   }
 };

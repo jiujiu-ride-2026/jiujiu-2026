@@ -827,6 +827,7 @@ body.immersive .choice .desc {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: .02em;
+  line-height: 1.65;
   color: #a9702c;
 }
 
